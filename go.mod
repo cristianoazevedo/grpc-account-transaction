@@ -1,4 +1,4 @@
-module github.com/csazevedo/grpc-account-transaction
+module github.com/cristianoazevedo/grpc-account-transaction
 
 go 1.14
 
