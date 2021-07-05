@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option go_package = "github.com/csazevedo/grpc-account-transaction";
+
+package account_transaction;
+
+service Account {
+  rpc Create (CreateAccountRequest) returns (CreateAccountResponse) {}
+  rpc Get (GetAccountRequest) returns (GetAccountResponse) {}
+}
+
+service Transaction {
+    rpc Create (CreateTransactionRequest) returns (CreateTransactionResponse) {}
+  }
+
+message CreateAccountRequest {
+  string document_number = 1;
+}
+
+message GetAccountRequest {
+    string account_id = 1;
+}
+
+message CreateAccountResponse {
+    string account_id = 1;
+}
+
+message GetAccountResponse {
+    string account_id = 1;
+    string document_number = 2;
+}
+
+message CreateTransactionRequest {
+    string account_id = 1;
+    int32 operation_type = 2;
+    float amount = 3;
+}
+
+message CreateTransactionResponse {
+    string transaction_id = 1;
+}
