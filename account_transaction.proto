@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/csazevedo/grpc-account-transaction";
+option go_package = "github.com/cristianoazevedo/grpc-account-transaction";
 
 package account_transaction;
 
